@@ -28,21 +28,7 @@ const generateCaptcha = (length) => {
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     registerCommands();
-
-    // Set the bot's presence (activity)
-    client.user.setPresence({
-        activities: [
-            {
-                name: 'Helping with CAPTCHAs',
-                type: 'PLAYING' // Options: PLAYING, STREAMING, LISTENING, WATCHING
-            }
-        ],
-        status: 'online' // Options: 'online', 'idle', 'dnd', 'invisible'
-    });
-
-    console.log('Bot presence set successfully!');
-});
-
+    
 async function registerCommands() {
     const commands = [
         {
