@@ -28,7 +28,8 @@ const generateCaptcha = (length) => {
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     registerCommands();
-    
+});
+
 async function registerCommands() {
     const commands = [
         {
