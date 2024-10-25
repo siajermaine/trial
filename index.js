@@ -27,6 +27,23 @@ const generateCaptcha = (length) => {
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+
+    // Set the bot's presence
+    client.user.setPresence({
+        activities: [
+            {
+                name: 'Wisteria',
+                type: 'WATCHING' // PLAYING, LISTENING, or STREAMING can be used as well
+            }
+        ],
+        status: 'dnd' // 'online', 'idle', 'dnd', or 'invisible'
+    });
+
+    console.log('Bot presence set successfully!');
+});
+
+client.once('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
     registerCommands();
 });
 
